@@ -1,4 +1,4 @@
-# 🧩 [Hexagonal Architecture (Ports and Adapters)]([url](https://dev.to/bytehide/hexagonal-architectural-pattern-in-c-full-guide-2024-3fhp))
+# 🧩 [Hexagonal Architecture (Ports and Adapters)](https://dev.to/bytehide/hexagonal-architectural-pattern-in-c-full-guide-2024-3fhp)
 
 **Hexagonal Architecture**, also known as **Ports and Adapters Architecture**, is a software design pattern introduced by **Alistair Cockburn**.  
 It focuses on making the application **independent of frameworks, databases, and external systems**, allowing for **flexibility, testability, and maintainability**.
@@ -48,7 +48,7 @@ They are **contracts**, not implementations.
 
 There are two types of ports:
 
-- **Inbound Ports:** Define how external actors (like APIs, UIs) can interact with the application core.
+- **Inbound Ports:** Define how external actors (like APIs, UIs) can interact with the application core.  
 - **Outbound Ports:** Define how the core interacts with external systems (like databases, message brokers, external APIs).
 
 **Example:**
@@ -74,7 +74,7 @@ public interface IOrderRepository
 Adapters are **implementations** of the ports.  
 They are responsible for translating communication between the core and the external world.
 
-- **Inbound Adapters:** Implement the entry points (e.g., REST Controllers, CLI commands).
+- **Inbound Adapters:** Implement the entry points (e.g., REST Controllers, CLI commands).  
 - **Outbound Adapters:** Implement external communication (e.g., database repositories, third-party API calls).
 
 **Example:**
@@ -123,10 +123,10 @@ public class OrderService : IOrderService
 
 ## ⚙️ Flow of Control
 
-1. A **user** interacts with the system via an interface (e.g., REST API, CLI).
-2. The **inbound adapter** handles the request and invokes the **core logic** through the **inbound port**.
-3. The **core** executes business logic and may call **outbound ports** to interact with external systems.
-4. **Outbound adapters** perform those external operations (e.g., database writes, sending emails).
+1. A **user** interacts with the system via an interface (e.g., REST API, CLI).  
+2. The **inbound adapter** handles the request and invokes the **core logic** through the **inbound port**.  
+3. The **core** executes business logic and may call **outbound ports** to interact with external systems.  
+4. **Outbound adapters** perform those external operations (e.g., database writes, sending emails).  
 
 ---
 
@@ -150,22 +150,25 @@ public class OrderService : IOrderService
 
 ---
 
-Hexagonal architecture maps nicely in .NET Core Web API:
+## 🔗 Mapping to .NET Core Web API
 
-Hexagonal Concept	.NET Example
-Domain	Entities, Services, Interfaces
-Inbound Port	Application Service Interface
-Outbound Port	Repository Interface
-Inbound Adapter	Controller
-Outbound Adapter	Repository Implementation, External API Service
+| Hexagonal Concept   | .NET Example                                           |
+|---------------------|--------------------------------------------------------|
+| **Domain**          | Entities, Services, Interfaces                         |
+| **Inbound Port**    | Application Service Interface                          |
+| **Outbound Port**   | Repository Interface                                   |
+| **Inbound Adapter** | Controller                                             |
+| **Outbound Adapter**| Repository Implementation, External API Service        |
+
+---
 
 ## 🧠 Key Benefits
 
-- ✅ **Independent of frameworks:** Core logic is not tied to any specific technology.
-- ✅ **Easily testable:** Business logic can be tested without real databases or APIs.
-- ✅ **Maintainable:** Changes in I/O layers don’t affect the domain layer.
-- ✅ **Flexible:** You can replace adapters (like database or API clients) without modifying core logic.
-- ✅ **Scalable:** Works well for complex, evolving systems and microservices.
+- ✅ **Independent of frameworks:** Core logic is not tied to any specific technology.  
+- ✅ **Easily testable:** Business logic can be tested without real databases or APIs.  
+- ✅ **Maintainable:** Changes in I/O layers don’t affect the domain layer.  
+- ✅ **Flexible:** You can replace adapters (like database or API clients) without modifying core logic.  
+- ✅ **Scalable:** Works well for complex, evolving systems and microservices.  
 
 ---
 
