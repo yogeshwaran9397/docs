@@ -150,6 +150,15 @@ public class OrderService : IOrderService
 
 ---
 
+Hexagonal architecture maps nicely in .NET Core Web API:
+
+Hexagonal Concept	.NET Example
+Domain	Entities, Services, Interfaces
+Inbound Port	Application Service Interface
+Outbound Port	Repository Interface
+Inbound Adapter	Controller
+Outbound Adapter	Repository Implementation, External API Service
+
 ## 🧠 Key Benefits
 
 - ✅ **Independent of frameworks:** Core logic is not tied to any specific technology.
