@@ -1,4 +1,4 @@
-# 🧩 Hexagonal Architecture (Ports and Adapters)
+# 🧩 [Hexagonal Architecture (Ports and Adapters)]([url](https://dev.to/bytehide/hexagonal-architectural-pattern-in-c-full-guide-2024-3fhp))
 
 **Hexagonal Architecture**, also known as **Ports and Adapters Architecture**, is a software design pattern introduced by **Alistair Cockburn**.  
 It focuses on making the application **independent of frameworks, databases, and external systems**, allowing for **flexibility, testability, and maintainability**.
