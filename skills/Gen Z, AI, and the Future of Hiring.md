@@ -1,3 +1,4 @@
+https://notebooklm.google.com/notebook/e1ba4ff4-f528-4247-9314-01d14d08f2c2
 1. Context File: AI in HR and Recruitment (Hiring.com Case Study)
 This context, primarily derived from the YouTube podcast transcript, details the practical implementation, strategic rationale, and societal impact of using Artificial Intelligence (AI) in the hiring process, particularly for high-volume recruitment.
 A. Automation and Efficiency in Recruitment
